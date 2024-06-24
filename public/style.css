@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header, footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+
+main {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, #4e9af1, #8a3ab9); /* Blue to purple gradient */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(to bottom, #8a3ab9, #4e9af1); /* Purple to blue gradient on hover */
+}
+
+/* Additional styles for button */
+.btn {
+    background: #333;
+    color: #fff;
+}
+
+.btn:hover {
+    background: #555;
+}
