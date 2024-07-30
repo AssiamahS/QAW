@@ -12,7 +12,7 @@ body {
 }
 
 header, footer {
-    background: #333;
+    background: #3f6ea1; /* Changed to blue */
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -44,10 +44,26 @@ main {
 
 /* Additional styles for button */
 .btn {
-    background: #333;
+    background: #2e4b6b; /* Changed to blue */
     color: #fff;
 }
 
 .btn:hover {
-    background: #555;
+    background: #0056b3; /* Darker blue on hover */
 }
+
+.no-resize {
+    resize: none; /* Prevent resizing */
+}
+
+#successMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
