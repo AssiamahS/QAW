@@ -1,150 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <img src="./qaw-logo.png" width="100" height="100" alt="qaw-logo">
-    <title>Need Help? Submit a Ticket!</title>
-    <link rel="stylesheet" href="./style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Need Help? Submit a Ticket!</title>
+    <title>Ticket Submission Site</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-    <style>
-        .service-option {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .service-option:hover {
-            background-color: #f8f9fa;
-        }
-        .service-option.selected {
-            background-color: #007bff;
-            color: white;
-        }
-    </style>
 </head>
-
 <body>
-    <header>
-        <div class="container text-center">
-            <h1>Need Help?</h1>
-            <p>Reliable Maintenance Experts, Every Time.</p>
-            <h2>72-Hour Response Guarantee: 
-                <h1>
-            </h1> We promise to arrive promptly and resolve your maintenance issues efficiently, ensuring your business runs smoothly.</h2>
-        </div>
-    </header>
-    
-    <main>
-        <div class="container text-center">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ticketModal">
-                Submit a Ticket
-            </button>
-        </div>
-    </main>
-    
-    <!-- Modal -->
-    <div class="modal fade" id="ticketModal" tabindex="-1" role="dialog" aria-labelledby="ticketModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="ticketModalLabel">Submit a Ticket</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <span data-feather="home"></span>
+                                Dashboard <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="file"></span>
+                                Tickets
+                            </a>
+                        </li>
+                        <!-- Add more sidebar items here -->
+                    </ul>
                 </div>
-                <div class="modal-body">
-                    <form id="ticketForm">
-                        <div class="form-group">
-                            <label for="requestor">First Name</label>
-                            <input type="text" class="form-control" id="requestor" placeholder="Enter your First name" required>
-                        </div>
+            </nav>
 
-                        <div class="form-group">
-                            <label for="email">Last Name</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your Last name" required>
+            <!-- Main Content -->
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Ticket #2445</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group mr-2">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Add</button>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="address">Street Address</label>
-                            <input type="address" class="form-control" id="address" placeholder="Enter your address" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="address">City</label>
-                            <input type="address" class="form-control" id="address" placeholder="Enter your City" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="state">State</label>
-                            <select class="form-control" id="state" required>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="Zip">ZIP-Code</label>
-                            <input type="text" class="form-control" id="Zip-Code" placeholder="Enter your ZIP or Postal Code" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
-                        </div>
-                        
-                        
-                        <div class="form-group">
-                            <label>Service Type</label>
-                            <div class="d-flex flex-wrap justify-content-center" id="serviceOptions">
-                                <div class="service-option" data-service="cleaning">Cleaning</div>
-                                <div class="service-option" data-service="electrical">Electrical</div>
-                                <div class="service-option" data-service="handyman">Handyman</div>
-                                <div class="service-option" data-service="hvac">HVAC</div>
-                                <div class="service-option" data-service="plumbing">Plumbing</div>
+                <!-- Ticket Details Form -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <form>
+                            <div class="form-group">
+                                <label for="requestor">Requestor</label>
+                                <input type="text" class="form-control" id="requestor" value="Ellen Erebus" readonly>
                             </div>
-                            <input type="hidden" id="selectedService" name="selectedService" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="issue">Issue</label>
-                            <textarea class="form-control no-resize" id="issue" rows="3" placeholder="Describe your issue" required></textarea>
+                            <div class="form-group">
+                                <label for="assignee">Assignee</label>
+                                <input type="text" class="form-control" id="assignee" value="Hugo Helios" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="ccs">CCs</label>
+                                <input type="text" class="form-control" id="ccs" value="Luke Lumios" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" value="eerebus@gmail.com" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="text" class="form-control" id="phone" value="+1 555 555 5544" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="tags">User Tags</label>
+                                <input type="text" class="form-control" id="tags" value="Top User, Community Ambassador" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="notes">Notes</label>
+                                <textarea class="form-control" id="notes" rows="3" readonly>9/24 - Ellen’s having trouble with the lamp she purchased.</textarea>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Comments Section -->
+                    <div class="col-md-8">
+                        <h4>Light Switch Doesn’t Work</h4>
+                        <small class="text-muted">Email from Ellen Erebus | eerebus@gmail.com to Support support@support.lightenup.com</small>
+                        <div class="my-3 p-3 bg-white rounded box-shadow">
+                            <h6 class="border-bottom border-gray pb-2 mb-0">Recent comments</h6>
+                            <div class="media text-muted pt-3">
+                                <img src="https://via.placeholder.com/32" alt="" class="mr-2 rounded">
+                                <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                    <strong class="d-block text-gray-dark">@Ellen Erebus</strong>
+                                    Thanks Luke! That did the trick! This new lamp is way more awesome now :)
+                                </p>
+                            </div>
+                            <div class="media text-muted pt-3">
+                                <img src="https://via.placeholder.com/32" alt="" class="mr-2 rounded">
+                                <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                    <strong class="d-block text-gray-dark">@Luke Lumios</strong>
+                                    Hi Ellen! Have you tried turning it on and off again? Let me know if that helps!
+                                </p>
+                            </div>
+                            <small class="d-block text-right mt-3">
+                                <a href="#">All comments</a>
+                            </small>
                         </div>
 
-                        <div class="form-group">
-                            <label for="imageUpload">Upload Picture</label>
-                            <input type="file" class="form-control-file" id="imageUpload" accept="image/*">
+                        <!-- Comment Form -->
+                        <div class="my-3 p-3 bg-light rounded box-shadow">
+                            <h6 class="border-bottom border-gray pb-2 mb-0">Add a comment</h6>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit as Solved</button>
                         </div>
-                    </form>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Go Back</button>
-                    <button type="button" class="btn btn-primary" id="submitTicket">Submit Ticket</button>
-                </div>
-            </div>
+            </main>
         </div>
     </div>
 
-    <footer class="bg-teal text-center py-4">
-        <div class="container">
-            <p>Copyright &copy; 2024 QAW. All rights reserved.</p>
-        </div>
-    </footer>
-    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="./script.js"></script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function() {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					head.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					head.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function(msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			console.log('Live reload enabled.');
+		})();
+	}
+	// ]]>
+</script>
+</body>
+</html>
